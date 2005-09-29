@@ -1,0 +1,22 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1370
+
+CVS conflict resolution using vimdiff
+
+When one does "cvs update", one may get files marked with "C" for conflict.  Cvs was unable to automatically merge one's local version of such files with the repository's version, and so merging requires human intervention.  The :CVSconflict command takes the current conflict file, splits it into two separate files, and enables vimdiff-style editing and viewing.
+
+A command,
+
+  :CVSconflict
+
+is provided which transforms the current file containing cvs conflict sections such as
+
+  <<<<<<<
+  ...local version...
+  =======
+  ...repository version...
+  >>>>>>>
+
+into two side by side versions.  Vim&#039s diff mode is enabled with these two windows, greatly facilitating the production of a merged file.
+
+(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#CVSCONFLICT)
+
